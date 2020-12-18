@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0SN6qpjNkjy1BHIoRL485o7fg4o4adPrhqQkxO3bJGSzlmW+jweZN9I6n527BZvJWqm0b9ILP4Rz5XAW9Rr6JQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sekul\\OneDrive\\Desktop\\News-System\\NewsSystem\\NewsSystem.Domain\\NewsSystem.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sekul\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
