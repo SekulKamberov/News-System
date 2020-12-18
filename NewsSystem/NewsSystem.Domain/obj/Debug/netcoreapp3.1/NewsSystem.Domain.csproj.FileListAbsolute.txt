@@ -1,0 +1,13 @@
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.exe
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.deps.json
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.runtimeconfig.json
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.runtimeconfig.dev.json
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.dll
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\bin\Debug\netcoreapp3.1\NewsSystem.Domain.pdb
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.csprojAssemblyReference.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.AssemblyInfo.cs
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.dll
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.pdb
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Domain\obj\Debug\netcoreapp3.1\NewsSystem.Domain.genruntimeconfig.cache

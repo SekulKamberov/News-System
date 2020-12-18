@@ -1,0 +1,9 @@
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\bin\Debug\netcoreapp3.1\NewsSystem.Web.deps.json
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\bin\Debug\netcoreapp3.1\NewsSystem.Web.dll
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\bin\Debug\netcoreapp3.1\NewsSystem.Web.pdb
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.csprojAssemblyReference.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.AssemblyInfoInputs.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.AssemblyInfo.cs
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.csproj.CoreCompileInputs.cache
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.dll
+C:\Users\sekul\OneDrive\Desktop\News-System\NewsSystem\NewsSystem.Web\obj\Debug\netcoreapp3.1\NewsSystem.Web.pdb
