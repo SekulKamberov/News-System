@@ -18,7 +18,7 @@
             this.UserId = userId;
             this.NickName = nickName;
             
-            this.articles = new HashSet<Article>();
+            
         }
 
         public string UserId { get; set; }
