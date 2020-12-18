@@ -25,5 +25,7 @@
 
         public int JournalistId { get; private set; }
 
+        
+
     }
 }

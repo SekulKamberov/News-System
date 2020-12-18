@@ -1,7 +1,8 @@
 ﻿namespace NewsSystem.ArticleCreation.Models.Journalists
 {
     using System.Collections.Generic;
-     
+    using System.Linq;
+
     using NewsSystem.Domain.Common;
     using NewsSystem.Domain.Common.Models;
     using NewsSystem.Domain.ArticleCreation.Models.Articles;
@@ -24,5 +25,9 @@
         public string UserId { get; set; }
 
         public string NickName { get; private set; }
+
+        public IReadOnlyCollection<Article> Articles => this.articles.ToList().AsReadOnly();
+
+        public void AddArticle(Article Article) => this.articles.Add(Article);
     }
 }
