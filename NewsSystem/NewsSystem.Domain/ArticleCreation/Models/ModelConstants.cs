@@ -27,5 +27,12 @@
             public const int AddressMinLength = 5;
             public const int AddressMaxLength = 30;
         }
+
+        public class PhoneNumber
+        {
+            public const int MinPhoneNumberLength = 5;
+            public const int MaxPhoneNumberLength = 20;
+            public const string MaxPhoneNumberRegularExpression = @"\+[0-9]*";
+        }
     }
 }

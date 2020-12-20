@@ -8,6 +8,7 @@
     using NewsSystem.Domain.ArticleCreation.Models.Articles;
     using NewsSystem.Domain.ArticleCreation.Exceptions;
     using NewsSystem.Domain.ArticleCreation.Models;
+    using NewsSystem.Domain.ArticleCreation.Models.Journalists;
 
     public class Journalist : Entity<int>, IAggregateRoot
     {
@@ -15,13 +16,15 @@
 
         internal Journalist(
             string userId,
-            string nickName
+            string nickName,
+            Address address
             ) 
         {
             Validate(nickName);
 
             this.UserId = userId;
             this.NickName = nickName;
+            this.Address = address;
 
             this.articles = new HashSet<Article>();
         }
@@ -29,6 +32,8 @@
         public string UserId { get; set; }
 
         public string NickName { get; private set; }
+
+        public Address Address { get; }
 
         public IReadOnlyCollection<Article> Articles => this.articles.ToList().AsReadOnly();
 

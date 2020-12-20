@@ -2,7 +2,7 @@
 {
     using NewsSystem.Domain.Common;
 
-    internal sealed class InvalidJournalistException : BaseDomainException
+    public class InvalidJournalistException : BaseDomainException
     {
         public InvalidJournalistException()
         {

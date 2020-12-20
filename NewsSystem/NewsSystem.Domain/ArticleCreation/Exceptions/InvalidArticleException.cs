@@ -2,7 +2,7 @@
 {
     using Common;
 
-    internal sealed class InvalidArticleException : BaseDomainException
+    public class InvalidArticleException : BaseDomainException
     {
         public InvalidArticleException()
         {
