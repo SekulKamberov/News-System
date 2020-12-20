@@ -17,7 +17,8 @@
         internal Journalist(
             string userId,
             string nickName,
-            Address address
+            Address address,
+            PhoneNumber phoneNumber
             ) 
         {
             Validate(nickName);
@@ -25,6 +26,7 @@
             this.UserId = userId;
             this.NickName = nickName;
             this.Address = address;
+            this.PhoneNumber = phoneNumber;
 
             this.articles = new HashSet<Article>();
         }
@@ -34,6 +36,8 @@
         public string NickName { get; private set; }
 
         public Address Address { get; }
+
+        public PhoneNumber PhoneNumber { get; }
 
         public IReadOnlyCollection<Article> Articles => this.articles.ToList().AsReadOnly();
 
@@ -45,5 +49,13 @@
                 ModelConstants.Journalist.MinNameLength,
                 ModelConstants.Journalist.MaxNameLength,
                 nameof(this.NickName));
+
+        public Journalist UpdateName(string nickName)
+        {
+            this.Validate(nickName);
+            this.NickName = nickName;
+
+            return this;
+        }
     }
 }

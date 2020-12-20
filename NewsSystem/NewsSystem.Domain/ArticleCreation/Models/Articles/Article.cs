@@ -51,5 +51,30 @@
             => Guard.ForValidUrl<InvalidArticleException>(
               imageUrl, 
               nameof(this.ImageUrl));
+
+        public Article UpdateTitle(string title)
+        {
+            this.ValidateTitle(title);
+            this.Title = title;
+
+            return this;
+        }
+
+        public Article UpdateContent(string content)
+        {
+            this.ValidateContent(content);
+            this.Content = content;
+
+            return this;
+        }
+
+        public Article UpdateImageUrl(string imageUrl)
+        {
+            this.ValidateImageUrl(imageUrl);
+            this.ImageUrl = imageUrl;
+
+            return this;
+        }
+
     }
 }

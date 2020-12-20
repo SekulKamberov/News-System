@@ -34,5 +34,14 @@
             public const int MaxPhoneNumberLength = 20;
             public const string MaxPhoneNumberRegularExpression = @"\+[0-9]*";
         }
+
+        public class Category
+        {
+            public const int MinNameLength = 5;
+            public const int MaxNameLength = 15;
+
+            public const int MinDescriptionLength = 20;
+            public const int MaxDescriptionLength = 1000;
+        }
     }
 }
