@@ -5,7 +5,7 @@
 
     public class Category : Entity<int>
     {
-        public Category(string name, string description)
+        internal Category(string name, string description)
         {
             this.Validate(name, description);
             this.Name = name;

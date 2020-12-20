@@ -1,20 +1,30 @@
 ﻿namespace NewsSystem.Domain.ArticleCreation.Models.Articles
 {
-    using NewsSystem.Domain.ArticleCreation.Exceptions;
-    using NewsSystem.Domain.Common;
-    using NewsSystem.Domain.Common.Models;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Exceptions;
+    using Common;
+    using Common.Models;
 
     public class Article : Entity<int>, IAggregateRoot
     {
+        private static readonly IEnumerable<Category> AllowedCategories
+            = new CategoryData().GetData().Cast<Category>();
+
         internal Article(
             string title,
             string content,
+            Category category,
             string imageUrl,
             int journalistId) 
         {
-            Validate(title, content, imageUrl);
+            this.Validate(title, content, imageUrl);
+            this.ValidateCategory(category);
+
             this.Title = title;
             this.Content = content;
+            this.Category = category;
             this.ImageUrl = imageUrl;
             this.JournalistId = journalistId;
         }
@@ -26,6 +36,8 @@
         public string ImageUrl { get; private set; }
 
         public int JournalistId { get; private set; }
+
+        public Category Category { get; private set; }
 
         private void Validate(string title, string content, string imageUrl)
         {
@@ -74,6 +86,28 @@
             this.ImageUrl = imageUrl;
 
             return this;
+        }
+
+        public Article UpdateCategory(Category category)
+        {
+            this.ValidateCategory(category);
+            this.Category = category;
+
+            return this;
+        }
+
+        private void ValidateCategory(Category category)
+        {
+            var categoryName = category?.Name;
+
+            if (AllowedCategories.Any(c => c.Name == categoryName))
+            {
+                return;
+            }
+
+            var allowedCategoryNames = string.Join(", ", AllowedCategories.Select(c => $"'{c.Name}'"));
+
+            throw new InvalidArticleException($"'{categoryName}' is not a valid category. Allowed values are: {allowedCategoryNames}.");
         }
 
     }
