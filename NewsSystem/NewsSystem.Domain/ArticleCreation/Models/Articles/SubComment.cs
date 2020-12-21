@@ -1,19 +1,16 @@
 ﻿namespace NewsSystem.Domain.ArticleCreation.Models.Articles
 {
-    using System.Collections.Generic;
-    using System.Linq;
-
     using NewsSystem.Domain.ArticleCreation.Exceptions;
     using NewsSystem.Domain.Common.Models;
 
-    public class Comment : Entity<int>
+    public class SubComment : Entity<int>
     {
-        private readonly HashSet<SubComment> subComments;
-        internal Comment(
+        internal SubComment(
            string title,
            string content,
            string createdBy,
-           int articleId) 
+           int articleId,
+           int commentId)
         {
             this.Validate(title, content, createdBy, articleId);
 
@@ -21,8 +18,7 @@
             this.Content = content;
             this.CreatedBy = createdBy;
             this.ArticleId = articleId;
-
-            this.subComments = new HashSet<SubComment>();
+            this.CommentId = commentId;
         }
 
         public string Title { get; private set; }
@@ -35,17 +31,9 @@
 
         public Article Article { get; private set; }
 
-        public IReadOnlyCollection<SubComment> SubComment => this.subComments.ToList().AsReadOnly();
+        public int CommentId { get; set; }
 
-        public Comment UpdateComment(string title, string content, string createdBy, int articleId, int commentId)
-        {
-            this.Title = title;
-            this.Content = content;
-            this.CreatedBy = createdBy;
-            this.ArticleId = articleId;
-
-            return this;
-        }
+        public Comment Comment { get; set; }
 
         private void Validate(string title, string content, string categoryBy, int articleId)
         {
@@ -56,29 +44,31 @@
         }
 
         private void ValidateTitle(string title)
-            => Guard.ForStringLength<InvalidCommentException>(
-                title,
-                ModelConstants.Comment.MinTitleLength,
-                ModelConstants.Comment.MaxTitleLength,
-                nameof(this.Title));
+             => Guard.ForStringLength<InvalidSubCommentException>(
+                 title,
+                 ModelConstants.Comment.MinTitleLength,
+                 ModelConstants.Comment.MaxTitleLength,
+                 nameof(this.Title));
 
         private void ValidateContent(string content)
-            => Guard.ForStringLength<InvalidCommentException>(
+            => Guard.ForStringLength<InvalidSubCommentException>(
                 content,
                 ModelConstants.Comment.MinContentLength,
                 ModelConstants.Comment.MaxContentLength,
                 nameof(this.Content));
 
         private void ValidateCreatedBy(string createdBy)
-            => Guard.AgainstEmptyString<InvalidCommentException>(
+            => Guard.AgainstEmptyString<InvalidSubCommentException>(
                 createdBy,
                 nameof(this.CreatedBy));
 
         private void ValidateArticleId(int articleId)
-            => Guard.AgainstOutOfRange<InvalidCommentException>(
+            => Guard.AgainstOutOfRange<InvalidSubCommentException>(
                 articleId,
                 ModelConstants.Common.Zero,
                 int.MaxValue,
                 nameof(this.ArticleId));
+
+
     }
 }

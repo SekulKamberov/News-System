@@ -53,5 +53,14 @@
             public const int MinContentLength = 10;
             public const int MaxContentLength = 1000;
         }
+
+        public class SubComment
+        {
+            public const int MinTitleLength = 3;
+            public const int MaxTitleLength = 30;
+
+            public const int MinContentLength = 10;
+            public const int MaxContentLength = 100;
+        }
     }
 }
