@@ -14,6 +14,7 @@
         public class Common 
         {
             public const int MaxUrlLength = 2048;
+            public const int Zero = 0;
         }
 
         public class Journalist
@@ -42,6 +43,15 @@
 
             public const int MinDescriptionLength = 20;
             public const int MaxDescriptionLength = 1000;
+        }
+
+        public class Comment
+        {
+            public const int MinTitleLength = 3;
+            public const int MaxTitleLength = 100;
+
+            public const int MinContentLength = 10;
+            public const int MaxContentLength = 1000;
         }
     }
 }

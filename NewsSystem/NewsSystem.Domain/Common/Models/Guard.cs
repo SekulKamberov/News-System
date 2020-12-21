@@ -28,17 +28,28 @@
             ThrowException<TExeption>($"{name} must have between {minLength} and {maxLength} symbols.");
         }
 
-        public static void AgainstOutOfRange<TExeption>(string value)
+        public static void AgainstOutOfRange<TExeption>(int number, int min, int max, string name = "Value")
             where TExeption : BaseDomainException, new()
         {
- 
+            if (min <= number && number <= max)
+            {
+                return;
+            }
+
+            ThrowException<TExeption>($"{name} must be between {min} and {max}.");
         }
 
-        public static void AgainstOutOfRange<TExeption>(string value, int gg) //yo do 
+        public static void AgainstOutOfRange<TExeption>(int number, decimal min, decimal max, string name = "Value")  
             where TExeption : BaseDomainException, new()
         {
+            if (min <= number && number <= max)
+            {
+                return;
+            }
 
+            ThrowException<TExeption>($"{name} must be between {min} and {max}.");
         }
+
         public static void ForValidUrl<TExeption>(string url, string name = "Name")
             where TExeption : BaseDomainException, new()
         {
@@ -50,10 +61,15 @@
             ThrowException<TExeption>($"{name} must be a valid URL.");
         }
 
-        public static void Against<TExeption>(string value)
+        public static void Against<TExeption>(object actualValue, object unexpectedValue, string name = "Value")
              where TExeption : BaseDomainException, new()
         {
+            if (!actualValue.Equals(unexpectedValue))
+            {
+                return;
+            }
 
+            ThrowException<TExeption>($"{name} must not be {unexpectedValue}. ");
         }
 
         private static void ThrowException<TExeption>(string message)
