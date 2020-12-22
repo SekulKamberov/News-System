@@ -4,11 +4,11 @@
     using System.Linq;
     using NewsSystem.Domain.Common;
 
-    public class Statisrics : IAggregateRoot
+    public class Statistics : IAggregateRoot
     {
         private readonly HashSet<ArticleView> articleViews;
 
-        internal Statisrics()
+        internal Statistics()
         {
             this.TotalArticles = 0;
             this.articleViews = new HashSet<ArticleView>();
